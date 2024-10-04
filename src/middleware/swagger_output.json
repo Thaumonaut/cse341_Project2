@@ -1,0 +1,178 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "0.1.0",
+    "title": "Business Contacts API",
+    "description": "API for managing contacts in a business environment"
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Contacts",
+      "description": "contact related endpoints"
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/api/contacts/": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "first_name",
+            "type": "string",
+            "required": false,
+            "in": "query",
+            "description": "Filter by first name"
+          },
+          {
+            "name": "last_name",
+            "type": "string",
+            "required": false,
+            "in": "query",
+            "description": "Filter by last name"
+          },
+          {
+            "name": "gender",
+            "type": "string",
+            "required": false,
+            "in": "query",
+            "description": "Filter by gender"
+          },
+          {
+            "name": "job",
+            "type": "string",
+            "required": false,
+            "in": "query",
+            "description": "Filter by job"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Contact"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "description": "Add a user details",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Contact"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/contacts/{id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "description": "Update contact details by employee id",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Contact"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Contact": {
+      "type": "object",
+      "properties": {
+        "employee_id": {
+          "type": "number",
+          "example": 1
+        },
+        "first_name": {
+          "type": "string",
+          "example": "John"
+        },
+        "last_name": {
+          "type": "string",
+          "example": "Doe"
+        },
+        "email": {
+          "type": "string",
+          "example": "johndoe@example.com"
+        },
+        "gender": {
+          "type": "string",
+          "example": "Male"
+        },
+        "avatar": {
+          "type": "string",
+          "example": "https://robohash.org/sequivelnihil.png?size=50x50&set=set1"
+        },
+        "job": {
+          "type": "string",
+          "example": "Environmental Specialist"
+        }
+      }
+    }
+  }
+}
