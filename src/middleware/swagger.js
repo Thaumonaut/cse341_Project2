@@ -12,8 +12,8 @@ const docs = {
       description: "Employee related endpoints",
     },
     {
-      name: "Projects",
-      description: "Project related endpoints",
+      name: "Clients",
+      description: "Client related endpoints",
     },
   ],
   schemes: ["http", "https"],
@@ -27,6 +27,14 @@ const docs = {
       gender: "Male",
       avatar: "https://robohash.org/sequivelnihil.png?size=50x50&set=set1",
       job: "Environmental Specialist"
+    }, 
+    Client: {
+      client_id: 1,
+      first_name: "John",
+      last_name: "Doe",
+      email: "johndoe@example.com",
+      company: "Acme Inc.",
+      phone: "555-555-5555"
     }
   }
 };

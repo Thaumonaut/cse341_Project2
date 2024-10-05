@@ -17,8 +17,6 @@ const createEmployeeValidation = () => {
     body('employee_id').notEmpty().withMessage("Employee id is required")
     .isNumeric().withMessage("Employee id must be a number"),
 
-    body('avatar').notEmpty().withMessage("Avatar is required"),
-
     body('birthday').notEmpty().withMessage("Birthday is required")
     .isDate().withMessage("Birthday must be a valid date"),
 
@@ -29,30 +27,41 @@ const createEmployeeValidation = () => {
 
 const updateEmployeeValidation = () => {
   return [
-    body('first_name').isLength({min: 2, max: 50}).withMessage("First name must be between 2 and 50 characters"),
-    body('last_name').isLength({min: 2, max: 50}).withMessage("Last name must be between 2 and 50 characters"),
-    body('email').isEmail().withMessage("Invalid email address"),
-    body('employee_id').isNumeric().withMessage("Employee id must be a number"),
-    body('avatar').notEmpty().withMessage("Avatar is required"),
-    body('job').isLength({min: 2, max: 50}).withMessage("Job must be between 2 and 50 characters"),
-    body('birthday').isDate().withMessage("Birthday must be a valid date"),
-    body('start_date').isDate().withMessage("Start date must be a valid date"),
+    body('first_name').optional().isLength({min: 2, max: 50}).withMessage("First name must be between 2 and 50 characters"),
+    body('last_name').optional().isLength({min: 2, max: 50}).withMessage("Last name must be between 2 and 50 characters"),
+    body('email').optional().isEmail().withMessage("Invalid email address"),
+    body('gender').optional().isLength({min: 2, max: 50}).withMessage("Gender must be between 2 and 50 characters"),
+    body('job').optional().isLength({min: 2, max: 50}).withMessage("Job must be between 2 and 50 characters"),
+    body('birthday').optional().isDate().withMessage("Birthday must be a valid date"),
+    body('start_date').optional().isDate().withMessage("Start date must be a valid date"),
   ]
 }
 
-const updateProjectValidation = () => {
+const updateClientValidation = () => {
   return [
-    body('name').isLength({min: 2, max: 50}).withMessage("Project name must be between 2 and 50 characters"),
-    body('description').isLength({min: 2, max: 500}).withMessage("Project description must be between 2 and 500 characters")
+    body('client_id').notEmpty().withMessage("Client id is not required"),
+    body('first_name').optional().isLength({min: 2, max: 50}).withMessage("First name must be between 2 and 50 characters"),
+    body('last_name').optional().isLength({min: 2, max: 50}).withMessage("Last name must be between 2 and 50 characters"),
+    body('phone').optional().isLength({min: 2, max: 50}).withMessage("Phone must be between 2 and 50 characters"),
+    body('company').optional().isLength({min: 2, max: 50}).withMessage("Company name must be between 2 and 50 characters"),
+    body('email').optional().isEmail().withMessage("Invalid email address"),
   ]
 }
 
-const createProjectValidation = () => {
+const createClientValidation = () => {
   return [
-    body('name').isLength({min: 2, max: 50}).withMessage("Project name must be between 2 and 50 characters"),
-    body('description').isLength({min: 2, max: 500}).withMessage("Project description must be between 2 and 500 characters"),
-    body('client').isLength({min: 2, max: 50}).withMessage("Client name must be between 2 and 50 characters"),
-    body('employee_id').isNumeric().withMessage("Employee id must be a number")
+    body('client_id').notEmpty().withMessage("Client id is required")
+      .isNumeric().withMessage("Client id must be a number"),
+    body('first_name').notEmpty().withMessage("First name is required")
+      .isLength({min: 2, max: 50}).withMessage("First name must be between 2 and 50 characters"),
+    body('last_name').notEmpty().withMessage("Last name is required")
+      .isLength({min: 2, max: 50}).withMessage("Last name must be between 2 and 50 characters"),
+    body('company').notEmpty().withMessage("Company is required")
+      .isLength({min: 1, max: 100}).withMessage("Company name must be between 1 and 100 characters"),
+    body('phone').notEmpty().withMessage("Phone is required")
+      .isMobilePhone('en-US').withMessage("Invalid phone number"),
+    body('email').notEmpty().withMessage("Email is required")
+      .isEmail().withMessage("Invalid email address"),
   ]
 }
 
@@ -67,7 +76,7 @@ const validate = (req, res, next) => {
 module.exports = {
   updateEmployeeValidation,
   createEmployeeValidation,
-  createProjectValidation,
-  updateProjectValidation,
+  createClientValidation,
+  updateClientValidation,
   validate
 }

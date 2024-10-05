@@ -1,7 +1,4 @@
 const { employee } = require("../database/schema");
-const data = require("../database/MOCK_DATA.json")
-
-// 
 
 const getEmployees = (req, res) => {
   /*  #swagger.parameters['First Name'] = {
@@ -57,14 +54,6 @@ const getEmployeeById = (req, res) => {
   })
 }
 
-/**
- * Add a new employee to the database.
- *
- * @param {Object} req - The express request object
- * @param {Object} res - The express response object
- *
- * @returns {void}
- */
 const addEmployee = (req, res) => {
   /*  #swagger.parameters['Body'] = {
           in: 'body',
@@ -72,10 +61,18 @@ const addEmployee = (req, res) => {
           required: true,
           schema: { $ref: '#/definitions/Employee' }
   } */
-  const newEmployee = new employee(req.body)
-  newEmployee.save().then((data) => {
-    res.status(200).json(data)
+
+  if(!req.body) return res.status(400).json({message: "Employee details cannot be empty"})
+
+  employee.findOne({employee_id: req.body.employee_id}).exec().then((data) => {
+    if(data) return res.status(409).json({message: "Employee already exists"})
+
+    const newEmployee = new employee(req.body)
+    newEmployee.save().then((data) => {
+      res.status(200).json(data)
+    })
   })
+
 }
 
 const updateEmployee = (req, res) => {
@@ -86,34 +83,31 @@ const updateEmployee = (req, res) => {
           schema: { $ref: '#/definitions/Employee' }
   } */
   const id = req.params.id
-  console.log(req.body)
-  employee.findOneAndUpdate({employee_id: id}, req.body, {new: true}).exec().then((data) => {
 
-    res.status(200).json(data)
+  employee.findOne({employee_id: id}).exec().then((data) => {
+    if(!data) return res.status(404).json({message: "Employee not found"})
+
+    employee.findOneAndUpdate({employee_id: id}, req.body, {new: true}).exec().then((data) => {
+      res.status(200).json(data)
+    })
   })
 }
 
 const deleteEmployee = (req, res) => {
   const id = req.params.id
-  employee.findOneAndDelete({employee_id: id}).exec().then((data) => {
-    res.status(200).json({message: "data deleted"})
-  })
-}
 
-// Fills the database with data if empty
-const initDatabase = (req, res) => {
-  // #swagger.ignore = true
-  if(employee.length > 0) {
-    res.status(200).json({message: "Already data in database."})
-    return
-  }
-  employee.insertMany(data)
-  res.status(200).json({message: "data inserted"})
+  employee.findOne({employee_id: id}).exec().then((data) => {
+    if(!data) return res.status(404).json({message: "Employee not found"})
+    
+    employee.findOneAndDelete({employee_id: id}).exec().then((data) => {
+      res.status(200).json({message: "data deleted"})
+    })
+  })
+
 }
 
 module.exports = {
   getEmployees,
-  initDatabase,
   addEmployee,
   deleteEmployee,
   getEmployeeById,

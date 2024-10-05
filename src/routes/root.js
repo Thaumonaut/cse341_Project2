@@ -13,6 +13,6 @@ router.use("/api", require("./apiDocsRoute"));
 // Add the employee routes to the router
 router.use("/api/employees", require("./employeeRoute")/** #swagger.tags = ["Employees"] */);
 
-router.use("/api/projects", require("./projectRoute")/** #swagger.tags = ["Departments"] */);
+router.use("/api/clients", require("./clientRoute")/** #swagger.tags = ["Departments"] */);
 
 module.exports = router
