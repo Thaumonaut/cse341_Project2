@@ -322,13 +322,17 @@
           "type": "string",
           "example": "Male"
         },
-        "avatar": {
-          "type": "string",
-          "example": "https://robohash.org/sequivelnihil.png?size=50x50&set=set1"
-        },
         "job": {
           "type": "string",
           "example": "Environmental Specialist"
+        },
+        "birthday": {
+          "type": "string",
+          "example": "1990-01-01"
+        },
+        "start_date": {
+          "type": "string",
+          "example": "2020-01-01"
         }
       }
     },

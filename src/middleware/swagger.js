@@ -25,8 +25,9 @@ const docs = {
       last_name: "Doe",
       email: "johndoe@example.com",
       gender: "Male",
-      avatar: "https://robohash.org/sequivelnihil.png?size=50x50&set=set1",
-      job: "Environmental Specialist"
+      job: "Environmental Specialist",
+      birthday: "1990-01-01",
+      start_date: "2020-01-01",
     }, 
     Client: {
       client_id: 1,
