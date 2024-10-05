@@ -3,19 +3,23 @@ const swaggerAutogen = require("swagger-autogen")();
 const docs = {
   info: {
     version: "0.1.0",
-    title: "Business Contacts API",
-    description: "API for managing contacts in a business environment",
+    title: "Business Employees API",
+    description: "API for managing employees in a business environment",
   },
   tags: [
     {
-      name: "Contacts",
-      description: "contact related endpoints"
-    }
+      name: "Employees",
+      description: "Employee related endpoints",
+    },
+    {
+      name: "Projects",
+      description: "Project related endpoints",
+    },
   ],
   schemes: ["http", "https"],
   host: "localhost:8080",
   definitions: {
-    Contact: {
+    Employee: {
       employee_id: 1,
       first_name: "John",
       last_name: "Doe",

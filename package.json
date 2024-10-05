@@ -12,7 +12,7 @@
   "keywords": [],
   "author": "Jacob",
   "license": "ISC",
-  "description": "Simple employee contacts api",
+  "description": "Simple employee employees api",
   "devDependencies": {
     "nodemon": "^3.1.6",
     "swagger-autogen": "^2.23.7"

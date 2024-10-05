@@ -2,15 +2,19 @@
   "swagger": "2.0",
   "info": {
     "version": "0.1.0",
-    "title": "Business Contacts API",
-    "description": "API for managing contacts in a business environment"
+    "title": "Business Employees API",
+    "description": "API for managing employees in a business environment"
   },
   "host": "localhost:8080",
   "basePath": "/",
   "tags": [
     {
-      "name": "Contacts",
-      "description": "contact related endpoints"
+      "name": "Employees",
+      "description": "Employee related endpoints"
+    },
+    {
+      "name": "Projects",
+      "description": "Project related endpoints"
     }
   ],
   "schemes": [
@@ -18,8 +22,11 @@
     "https"
   ],
   "paths": {
-    "/api/contacts/": {
+    "/api/employees/": {
       "get": {
+        "tags": [
+          "Employees"
+        ],
         "description": "",
         "parameters": [
           {
@@ -55,12 +62,15 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/Contact"
+              "$ref": "#/definitions/Employee"
             }
           }
         }
       },
       "post": {
+        "tags": [
+          "Employees"
+        ],
         "description": "",
         "parameters": [
           {
@@ -69,19 +79,25 @@
             "description": "Add a user details",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/Contact"
+              "$ref": "#/definitions/Employee"
             }
           }
         ],
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
     },
-    "/api/contacts/{id}": {
+    "/api/employees/{id}": {
       "get": {
+        "tags": [
+          "Employees"
+        ],
         "description": "",
         "parameters": [
           {
@@ -98,6 +114,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "Employees"
+        ],
         "description": "",
         "parameters": [
           {
@@ -114,6 +133,9 @@
         }
       },
       "put": {
+        "tags": [
+          "Employees"
+        ],
         "description": "",
         "parameters": [
           {
@@ -125,11 +147,62 @@
           {
             "name": "Body",
             "in": "body",
-            "description": "Update contact details by employee id",
+            "description": "Update employee details by employee id",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/Contact"
+              "$ref": "#/definitions/Employee"
             }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/projects/": {
+      "get": {
+        "tags": [
+          "Departments"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Departments"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/projects/{id}": {
+      "get": {
+        "tags": [
+          "Departments"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -137,11 +210,52 @@
             "description": "OK"
           }
         }
+      },
+      "delete": {
+        "tags": [
+          "Departments"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Departments"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
       }
     }
   },
   "definitions": {
-    "Contact": {
+    "Employee": {
       "type": "object",
       "properties": {
         "employee_id": {
