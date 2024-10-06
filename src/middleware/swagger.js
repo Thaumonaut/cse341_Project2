@@ -35,7 +35,7 @@ const docs = {
       last_name: "Doe",
       email: "johndoe@example.com",
       company: "Acme Inc.",
-      phone: "555-555-5555"
+      phone: "(555) 555-5555"
     }
   }
 };

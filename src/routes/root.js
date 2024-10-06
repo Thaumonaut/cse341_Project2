@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   // #swagger.ignore = true
-  res.send(`Welcome to the Employee List API. To view the docs, visit http://localhost:${process.env.PORT || 3000}/api`);
+  res.send(`Welcome to the Employee List API. To view the docs, visit /api/docs`);
 })
 
 // Add the documentation routes to the router

@@ -1,182 +1,20 @@
-[
-  {
-    "employee_id": 1,
-    "first_name": "Gavrielle",
-    "last_name": "Snawden",
-    "email": "gsnawden0@tripod.com",
-    "gender": "Female",
-    "avatar": "https://robohash.org/commodidoloresfugit.png?size=50x50&set=set1",
-    "job": "Structural Engineer"
-  },
-  {
-    "employee_id": 2,
-    "first_name": "Gerianne",
-    "last_name": "Whitsey",
-    "email": "gwhitsey1@ustream.tv",
-    "gender": "Female",
-    "avatar": "https://robohash.org/consecteturinciduntprovident.png?size=50x50&set=set1",
-    "job": "Graphic Designer"
-  },
-  {
-    "employee_id": 3,
-    "first_name": "Rodrique",
-    "last_name": "Raphael",
-    "email": "rraphael2@vinaora.com",
-    "gender": "Male",
-    "avatar": "https://robohash.org/excepturiplaceatbeatae.png?size=50x50&set=set1",
-    "job": "Software Consultant"
-  },
-  {
-    "employee_id": 4,
-    "first_name": "Aldin",
-    "last_name": "Heball",
-    "email": "aheball3@marriott.com",
-    "gender": "Male",
-    "avatar": "https://robohash.org/molestiassequiaccusamus.png?size=50x50&set=set1",
-    "job": "VP Sales"
-  },
-  {
-    "employee_id": 5,
-    "first_name": "Cynthea",
-    "last_name": "Dawltrey",
-    "email": "cdawltrey4@stanford.edu",
-    "gender": "Bigender",
-    "avatar": "https://robohash.org/doloremcumaliquid.png?size=50x50&set=set1",
-    "job": "GIS Technical Architect"
-  },
-  {
-    "employee_id": 6,
-    "first_name": "Raviv",
-    "last_name": "Foss",
-    "email": "rfoss5@cdc.gov",
-    "gender": "Polygender",
-    "avatar": "https://robohash.org/namdoloresrepellendus.png?size=50x50&set=set1",
-    "job": "Administrative Officer"
-  },
-  {
-    "employee_id": 7,
-    "first_name": "Reamonn",
-    "last_name": "Mitchelson",
-    "email": "rmitchelson6@cornell.edu",
-    "gender": "Male",
-    "avatar": "https://robohash.org/nobisvoluptatemmolestiae.png?size=50x50&set=set1",
-    "job": "Sales Associate"
-  },
-  {
-    "employee_id": 8,
-    "first_name": "Tiffani",
-    "last_name": "Prinne",
-    "email": "tprinne7@mediafire.com",
-    "gender": "Female",
-    "avatar": "https://robohash.org/idcorporisab.png?size=50x50&set=set1",
-    "job": "Web Developer I"
-  },
-  {
-    "employee_id": 9,
-    "first_name": "Gradey",
-    "last_name": "Jaffrey",
-    "email": "gjaffrey8@squidoo.com",
-    "gender": "Male",
-    "avatar": "https://robohash.org/perspiciatistemporemaxime.png?size=50x50&set=set1",
-    "job": "Senior Cost Accountant"
-  },
-  {
-    "employee_id": 10,
-    "first_name": "Darcee",
-    "last_name": "Wenden",
-    "email": "dwenden9@google.nl",
-    "gender": "Genderfluid",
-    "avatar": "https://robohash.org/asperioresquia.png?size=50x50&set=set1",
-    "job": "Staff Scientist"
-  },
-  {
-    "employee_id": 11,
-    "first_name": "Ortensia",
-    "last_name": "Jarritt",
-    "email": "ojarritta@nhs.uk",
-    "gender": "Female",
-    "avatar": "https://robohash.org/sequivelnihil.png?size=50x50&set=set1",
-    "job": "Environmental Specialist"
-  },
-  {
-    "employee_id": 12,
-    "first_name": "Read",
-    "last_name": "MacAne",
-    "email": "rmacaneb@list-manage.com",
-    "gender": "Male",
-    "avatar": "https://robohash.org/expeditaquodoloribus.png?size=50x50&set=set1",
-    "job": "Speech Pathologist"
-  },
-  {
-    "employee_id": 13,
-    "first_name": "Cornelia",
-    "last_name": "Fronsek",
-    "email": "cfronsekc@discovery.com",
-    "gender": "Female",
-    "avatar": "https://robohash.org/doloresrepellatexplicabo.png?size=50x50&set=set1",
-    "job": "VP Sales"
-  },
-  {
-    "employee_id": 14,
-    "first_name": "Ross",
-    "last_name": "Tilt",
-    "email": "rtiltd@163.com",
-    "gender": "Genderqueer",
-    "avatar": "https://robohash.org/autemexpeditaporro.png?size=50x50&set=set1",
-    "job": "Compensation Analyst"
-  },
-  {
-    "employee_id": 15,
-    "first_name": "Gustie",
-    "last_name": "Gutans",
-    "email": "ggutanse@latimes.com",
-    "gender": "Genderqueer",
-    "avatar": "https://robohash.org/omnisquosquis.png?size=50x50&set=set1",
-    "job": "Financial Advisor"
-  },
-  {
-    "employee_id": 16,
-    "first_name": "Iona",
-    "last_name": "Bence",
-    "email": "ibencef@weibo.com",
-    "gender": "Female",
-    "avatar": "https://robohash.org/quimaioresaspernatur.png?size=50x50&set=set1",
-    "job": "Systems Administrator IV"
-  },
-  {
-    "employee_id": 17,
-    "first_name": "Beaufort",
-    "last_name": "Stabbins",
-    "email": "bstabbinsg@sciencedirect.com",
-    "gender": "Male",
-    "avatar": "https://robohash.org/verosuscipitveritatis.png?size=50x50&set=set1",
-    "job": "Chemical Engineer"
-  },
-  {
-    "employee_id": 18,
-    "first_name": "Chevalier",
-    "last_name": "FitzGibbon",
-    "email": "cfitzgibbonh@cnn.com",
-    "gender": "Male",
-    "avatar": "https://robohash.org/estsuscipitvero.png?size=50x50&set=set1",
-    "job": "Environmental Specialist"
-  },
-  {
-    "employee_id": 19,
-    "first_name": "Juana",
-    "last_name": "Davidzon",
-    "email": "jdavidzoni@smugmug.com",
-    "gender": "Non-binary",
-    "avatar": "https://robohash.org/sedametrem.png?size=50x50&set=set1",
-    "job": "Data Coordinator"
-  },
-  {
-    "employee_id": 20,
-    "first_name": "Therese",
-    "last_name": "Humm",
-    "email": "thummj@oracle.com",
-    "gender": "Female",
-    "avatar": "https://robohash.org/utquiaccusantium.png?size=50x50&set=set1",
-    "job": "Design Engineer"
-  }
-]
+[{"employee_id":1,"first_name":"Giana","last_name":"Sobtka","email":"gsobtka0@godaddy.com","gender":"Female","job":"VP Quality Control","birthday":"1955-07-10","start_date":"2023-02-11"},
+{"employee_id":2,"first_name":"Annadiana","last_name":"Simenet","email":"asimenet1@discovery.com","gender":"Female","job":"Civil Engineer","birthday":"1954-04-13","start_date":"2005-06-27"},
+{"employee_id":3,"first_name":"Myranda","last_name":"Diegan","email":"mdiegan2@google.com.hk","gender":"Female","job":"Research Nurse","birthday":"1976-12-20","start_date":"2005-03-06"},
+{"employee_id":4,"first_name":"Solomon","last_name":"Hastings","email":"shastings3@zdnet.com","gender":"Male","job":"Sales Associate","birthday":"1980-04-18","start_date":"2004-09-09"},
+{"employee_id":5,"first_name":"Ker","last_name":"Fairs","email":"kfairs4@pbs.org","gender":"Male","job":"Environmental Tech","birthday":"2007-03-11","start_date":"2009-09-06"},
+{"employee_id":6,"first_name":"Doria","last_name":"Orhtmann","email":"dorhtmann5@unicef.org","gender":"Female","job":"Programmer Analyst I","birthday":"1991-12-25","start_date":"2008-10-15"},
+{"employee_id":7,"first_name":"Julita","last_name":"Glencorse","email":"jglencorse6@ucla.edu","gender":"Female","job":"Sales Representative","birthday":"1969-02-24","start_date":"2007-02-26"},
+{"employee_id":8,"first_name":"Millisent","last_name":"Shawyers","email":"mshawyers7@ask.com","gender":"Female","job":"Recruiter","birthday":"1967-07-02","start_date":"2024-08-03"},
+{"employee_id":9,"first_name":"Chery","last_name":"Brennenstuhl","email":"cbrennenstuhl8@webmd.com","gender":"Female","job":"Product Engineer","birthday":"2016-03-09","start_date":"2021-04-19"},
+{"employee_id":10,"first_name":"Baron","last_name":"Leblanc","email":"bleblanc9@trellian.com","gender":"Male","job":"Electrical Engineer","birthday":"1960-03-12","start_date":"2016-12-24"},
+{"employee_id":11,"first_name":"Osmond","last_name":"Waite","email":"owaitea@discovery.com","gender":"Male","job":"Geological Engineer","birthday":"1983-03-21","start_date":"2022-06-21"},
+{"employee_id":12,"first_name":"Jorie","last_name":"Huxham","email":"jhuxhamb@indiatimes.com","gender":"Female","job":"Programmer I","birthday":"2021-11-06","start_date":"2013-06-01"},
+{"employee_id":13,"first_name":"Kalindi","last_name":"Turneux","email":"kturneuxc@friendfeed.com","gender":"Female","job":"Recruiting Manager","birthday":"2008-09-17","start_date":"2013-10-31"},
+{"employee_id":14,"first_name":"Maressa","last_name":"Derdes","email":"mderdesd@cnet.com","gender":"Female","job":"Account Coordinator","birthday":"2001-09-27","start_date":"2011-03-26"},
+{"employee_id":15,"first_name":"Charmaine","last_name":"Colledge","email":"ccolledgee@lycos.com","gender":"Female","job":"Marketing Assistant","birthday":"2019-06-01","start_date":"2022-12-08"},
+{"employee_id":16,"first_name":"Rozele","last_name":"Bricklebank","email":"rbricklebankf@unesco.org","gender":"Female","job":"Data Coordinator","birthday":"1992-07-27","start_date":"2010-10-20"},
+{"employee_id":17,"first_name":"Fons","last_name":"Pennoni","email":"fpennonig@i2i.jp","gender":"Male","job":"Operator","birthday":"2021-07-31","start_date":"2013-11-15"},
+{"employee_id":18,"first_name":"Sheelah","last_name":"Collough","email":"scolloughh@amazon.de","gender":"Female","job":"Social Worker","birthday":"1955-01-21","start_date":"2018-01-28"},
+{"employee_id":19,"first_name":"Sheelah","last_name":"Sybbe","email":"ssybbei@cbslocal.com","gender":"Female","job":"General Manager","birthday":"1993-08-18","start_date":"2005-05-09"},
+{"employee_id":20,"first_name":"Carlita","last_name":"Goodred","email":"cgoodredj@cdc.gov","gender":"Female","job":"Community Outreach Specialist","birthday":"1970-12-26","start_date":"2000-06-29"}]
