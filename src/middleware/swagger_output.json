@@ -176,7 +176,7 @@
     "/api/clients/": {
       "get": {
         "tags": [
-          "Departments"
+          "Clients"
         ],
         "description": "",
         "responses": {
@@ -190,7 +190,7 @@
       },
       "post": {
         "tags": [
-          "Departments"
+          "Clients"
         ],
         "description": "",
         "parameters": [
@@ -220,7 +220,7 @@
     "/api/clients/{id}": {
       "get": {
         "tags": [
-          "Departments"
+          "Clients"
         ],
         "description": "",
         "parameters": [
@@ -242,7 +242,7 @@
       },
       "delete": {
         "tags": [
-          "Departments"
+          "Clients"
         ],
         "description": "",
         "parameters": [
@@ -264,7 +264,7 @@
       },
       "put": {
         "tags": [
-          "Departments"
+          "Clients"
         ],
         "description": "",
         "parameters": [
