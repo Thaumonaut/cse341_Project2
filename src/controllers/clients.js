@@ -36,7 +36,7 @@ const addClient = async (req, res) => {
 }
 
 const deleteClient = async (req, res) => {
-  const data = await client.findOne({employee_id: req.params.id}).exec()
+  const data = await client.findOne({client_id: req.params.id}).exec()
   if(!data) return res.status(404).json({message: "Client not found"})
 
   client.findOneAndDelete({client_id: req.params.id}).exec().then((data) => {
