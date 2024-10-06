@@ -17,7 +17,7 @@ const docs = {
     },
   ],
   schemes: ["http", "https"],
-  host: "localhost:8080",
+  host: "cse341-project2-46rk.onrender.com",
   definitions: {
     Employee: {
       employee_id: 1,

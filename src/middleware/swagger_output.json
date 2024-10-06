@@ -5,7 +5,7 @@
     "title": "Business Employees API",
     "description": "API for managing employees in a business environment"
   },
-  "host": "localhost:8080",
+  "host": "cse341-project2-46rk.onrender.com",
   "basePath": "/",
   "tags": [
     {
