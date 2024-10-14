@@ -1,5 +1,5 @@
 const express = require("express");
-const connectDB = require("../database/db");
+const { jwtCheck, addTokenToReq } = require("../middleware/auth");
 const { requiresAuth } = require("express-openid-connect");
 const router = express.Router();
 
@@ -15,10 +15,12 @@ router.get("/", (req, res) => {
     // <p>${JSON.stringify(req.cookies, null, 2)}</p>
 })
 
+router.use(addTokenToReq);
+
 router.get('/profile', (req, res) => {
   // #swagger.ignore = true
   // req.oidc.fetchUserInfo().then(data => console.log(data))
-  console.log(req.cookies)
+  console.log(req.headers)
   res.json(req.oidc.user);
 })
 
@@ -26,8 +28,8 @@ router.get('/profile', (req, res) => {
 router.use("/api", require("./apiDocsRoute"));
 
 // Add the employee routes to the router
-router.use("/api/employees", require("./employeeRoute")/** #swagger.tags = ["Employees"] */);
+router.use("/api/employees", jwtCheck, require("./employeeRoute")/** #swagger.tags = ["Employees"] */);
 
-router.use("/api/clients", requiresAuth(), require("./clientRoute")/** #swagger.tags = ["Clients"] */);
+router.use("/api/clients", jwtCheck, require("./clientRoute")/** #swagger.tags = ["Clients"] */);
 
 module.exports = router

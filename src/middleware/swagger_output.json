@@ -21,6 +21,18 @@
     "http",
     "https"
   ],
+  "securityDefinitions": {
+    "oAuthSample": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "tokenUrl": "https://dev-4qlbmsi47ra8ygmw.us.auth0.com/oauth/token",
+      "clientId": "6vFF3TCrxQxXyWEN8VKgzDrunTKklMjW",
+      "clientSecret": "2XkZyp8radUhlV5PP0qQEsxKlc_l1Iagfspg7rGcV5rlknyzlyFQWrm9uL2Udlhw",
+      "audience": "http://localhost:8080",
+      "redirectUri": "http://localhost:3000/callback",
+      "scopes": {}
+    }
+  },
   "paths": {
     "/api/employees/": {
       "get": {
